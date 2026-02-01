@@ -1,0 +1,156 @@
+<section class="facilities" id="fasilitas">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Fasilitas</p>
+      <h2 class="section-title">Lengkap & Berkualitas</h2>
+      <p class="section-sub">Setiap detail dirancang untuk memberikan kenyamanan maksimal bagi penghuni yang dinamis.</p>
+    </div>
+  </div>
+
+  <div class="fac-slider-container">
+    <div class="fac-track">
+      <div class="fac-card">
+        <div class="fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3 class="fac-title">Kamar Pribadi</h3>
+        <p class="fac-desc">Kamar luas dengan jendela besar untuk sirkulasi udara maksimal.</p>
+      </div>
+
+      <div class="fac-card">
+        <div class="fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 class="fac-title">Keamanan 24 Jam</h3>
+        <p class="fac-desc">Pengawasan CCTV 24/7 dan gerbang akses terkontrol demi keamanan.</p>
+      </div>
+
+      <div class="fac-card">
+        <div class="fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+        <h3 class="fac-title">Dapur Bersama</h3>
+        <p class="fac-desc">Area memasak lengkap yang bersih untuk kebutuhan makan harian.</p>
+      </div>
+
+      <div class="fac-card">
+        <div class="fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0114.08 0"/><circle cx="12" cy="20" r="2"/></svg></div>
+        <h3 class="fac-title">WiFi High-Speed</h3>
+        <p class="fac-desc">Internet kencang tanpa batas untuk WFH atau kuliah daring.</p>
+      </div>
+
+      <div class="fac-card">
+        <div class="fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2"/></svg></div>
+        <h3 class="fac-title">Layanan Laundry</h3>
+        <p class="fac-desc">Area cuci jemur luas untuk kenyamanan kebersihan pakaian Anda.</p>
+      </div>
+      
+      <div class="fac-card">
+        <div class="fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3 class="fac-title">Kamar Pribadi</h3>
+        <p class="fac-desc">Kamar luas dengan jendela besar untuk sirkulasi udara maksimal.</p>
+      </div>
+      <div class="fac-card">
+        <div class="fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 class="fac-title">Keamanan 24 Jam</h3>
+        <p class="fac-desc">Pengawasan CCTV 24/7 dan gerbang akses terkontrol demi keamanan.</p>
+      </div>
+      <div class="fac-card">
+        <div class="fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+        <h3 class="fac-title">Dapur Bersama</h3>
+        <p class="fac-desc">Area memasak lengkap yang bersih untuk kebutuhan makan harian.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .facilities {
+    padding: 120px 0;
+    background: #fff;
+    overflow: hidden; /* Mencegah scrollbar horizontal pada halaman */
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 5%;
+  }
+
+  /* --- SLIDER LOGIC --- */
+  .fac-slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+  }
+
+  /* Masking efek pudar di kiri dan kanan agar transisi halus */
+  .fac-slider-container::before,
+  .fac-slider-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+  }
+  .fac-slider-container::before { left: 0; background: linear-gradient(to right, white, transparent); }
+  .fac-slider-container::after { right: 0; background: linear-gradient(to left, white, transparent); }
+
+  .fac-track {
+    display: flex;
+    width: max-content; /* Biarkan konten memanjang ke kanan */
+    gap: 30px;
+    animation: scrollInfinite 30s linear infinite; /* Durasi 30 detik */
+  }
+
+  /* Berhenti saat kursor di atasnya */
+  .fac-slider-container:hover .fac-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes scrollInfinite {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 15px)); } /* Geser separuh dari total lebar track */
+  }
+
+  /* --- CARD STYLING --- */
+  .fac-card {
+    width: 320px; /* Ukuran tetap agar slider konsisten */
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid #f0f0f0;
+    transition: all 0.4s ease;
+    flex-shrink: 0; /* Mencegah kartu menciut */
+  }
+
+  .fac-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(230, 126, 34, 0.1);
+    transform: translateY(-5px);
+  }
+
+  .fac-icon {
+    width: 50px;
+    height: 50px;
+    background: #fffcf9;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(230, 126, 34, 0.1);
+  }
+
+  .fac-card:hover .fac-icon {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .fac-title { font-size: 1.2rem; font-weight: 700; color: #1a1a1a; margin-bottom: 12px; }
+  .fac-desc { font-size: 0.95rem; color: #666; line-height: 1.6; }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .facilities { padding: 80px 0; }
+    .fac-track { animation-duration: 20s; } /* Lebih cepat sedikit di mobile agar tidak bosan */
+    .fac-card { width: 280px; padding: 30px; }
+  }
+</style>

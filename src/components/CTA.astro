@@ -1,0 +1,137 @@
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box reveal">
+      <div class="cta-content">
+        <p class="cta-label">Siap Tinggal?</p>
+        <h2 class="cta-title">Mulai Perjalanan Anda<br/><em>Bersama Al'ashar Kos</em></h2>
+        <p class="cta-desc">
+          Jangan lewatkan kesempatan untuk mendapatkan hunian impian. Hubungi kami sekarang
+          dan dapatkan penawaran terbaik untuk kamar yang tersedia.
+        </p>
+        <div class="cta-actions">
+          <a href="https://wa.me/08139488240?text=Halo,%20saya%20ingin%20melakukan%20booking%20kamar%20di%20Al'ashar%20Kos.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20ketersediaan%20dan%20harga." target="_blank" rel="noopener noreferrer" class="btn-primary cta-btn">
+            Booking via WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="cta-deco cta-deco--1"></div>
+      <div class="cta-deco cta-deco--2"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-section { 
+    padding: 80px 0 120px; 
+    display: flex;
+    justify-content: center; /* Memastikan container di tengah */
+  }
+
+  .cta-box {
+    background: var(--orange);
+    border-radius: 32px;
+    padding: 80px 64px;
+    position: relative;
+    overflow: hidden;
+    /* Center alignment untuk box */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px; /* Sedikit dilebarkan agar teks proporsional di tengah */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Memastikan elemen di dalam content rata tengah */
+  }
+
+  .cta-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 16px;
+  }
+
+  .cta-title {
+    font-size: clamp(30px, 4.5vw, 44px);
+    color: #fff;
+    margin-bottom: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  .cta-title em {
+    font-style: italic;
+    color: rgba(255,255,255,0.88);
+  }
+
+  .cta-desc {
+    font-size: 16px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.75;
+    margin-bottom: 36px;
+    max-width: 520px; /* Disesuaikan agar simetris saat rata tengah */
+  }
+
+  /* Button Styling */
+  .cta-btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: #fff;
+    color: var(--orange-dark, #e67e22); /* Fallback ke orange jika var tidak terbaca */
+    box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+  }
+  
+  .cta-btn:hover {
+    background: #fff8f2;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 36px rgba(0,0,0,0.2);
+  }
+
+  /* Decorative circles - Dipertahankan posisinya agar tetap estetik */
+  .cta-deco {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    pointer-events: none; /* Agar tidak menghalangi klik */
+  }
+  
+  .cta-deco--1 {
+    width: 320px;
+    height: 320px;
+    top: -100px;
+    right: -80px;
+  }
+  
+  .cta-deco--2 {
+    width: 180px;
+    height: 180px;
+    bottom: -60px;
+    left: -40px; /* Dipindah ke kiri agar menyeimbangkan posisi center */
+    background: rgba(255,255,255,0.05);
+  }
+
+  /* Responsive Optimization */
+  @media (max-width: 768px) {
+    .cta-box { padding: 60px 30px; border-radius: 24px; }
+    .cta-title { font-size: 28px; }
+    .cta-desc { font-size: 15px; }
+  }
+  
+  @media (max-width: 480px) {
+    .cta-section { padding: 40px 0 80px; }
+    .cta-box { padding: 44px 24px; }
+    .cta-btn { width: 100%; text-align: center; } /* Tombol full width di HP */
+  }
+</style>

@@ -1,0 +1,239 @@
+---
+---
+<section class="pricing" id="paket">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label">Paket Hunian</p>
+      <h2 class="section-title">Pilih yang Sesuai Kebutuhan</h2>
+      <p class="section-sub">Tersedia berbagai pilihan paket dengan harga yang transparan dan kompetitif.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Basic -->
+      <div class="price-card reveal delay-1">
+        <div class="price-top">
+          <span class="price-tier">Basic</span>
+        </div>
+        <div class="price-amount">
+          <span class="price-currency">Rp</span>
+          <span class="price-num">1.500.000</span>
+        </div>
+        <p class="price-period">/ bulan</p>
+        <p class="price-note">Cocok untuk pelajar & mahasiswa</p>
+
+        <ul class="price-list">
+          <li>Kamar pribadi sedang</li>
+          <li>WiFi berkecepatan tinggi</li>
+          <li>Kamar mandi bersama</li>
+          <li>Dapur bersama</li>
+          <li>Area parkir</li>
+          <li>Keamanan 24 jam</li>
+        </ul>
+
+        <a href="https://wa.me/08139488240?text=Halo,%20saya%20tertarik%20dengan%20paket%20Basic%20di%20Al'ashar%20Kos.%20Bisa%20tolong%20informasikan%20lebih%20lanjut?" target="_blank" rel="noopener noreferrer" class="btn-outline">
+          Pilih Paket
+        </a>
+      </div>
+
+      <!-- Premium (Popular) -->
+      <div class="price-card price-card--popular reveal delay-2">
+        <div class="price-top">
+          <span class="price-tier">Premium</span>
+          <span class="price-badge">Paling Populer</span>
+        </div>
+        <div class="price-amount">
+          <span class="price-currency">Rp</span>
+          <span class="price-num">2.200.000</span>
+        </div>
+        <p class="price-period">/ bulan</p>
+        <p class="price-note">Pilihan terbaik untuk profesional muda</p>
+
+        <ul class="price-list">
+          <li>Kamar pribadi luas</li>
+          <li>WiFi fiber optic</li>
+          <li>Kamar mandi pribadi</li>
+          <li>AC pribadi</li>
+          <li>Dapur bersama</li>
+          <li>Area parkir motor</li>
+          <li>Ruang santai bersama</li>
+          <li>Keamanan 24 jam + CCTV</li>
+        </ul>
+
+        <a href="https://wa.me/08139488240?text=Halo,%20saya%20tertarik%20dengan%20paket%20Premium%20di%20Al'ashar%20Kos.%20Bisa%20tolong%20informasikan%20lebih%20lanjut?" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          Pilih Paket
+        </a>
+      </div>
+
+      <!-- Elite -->
+      <div class="price-card reveal delay-3">
+        <div class="price-top">
+          <span class="price-tier">Elite</span>
+        </div>
+        <div class="price-amount">
+          <span class="price-currency">Rp</span>
+          <span class="price-num">3.000.000</span>
+        </div>
+        <p class="price-period">/ bulan</p>
+        <p class="price-note">Hunian mewah dengan semua fasilitas</p>
+
+        <ul class="price-list">
+          <li>Kamar pribadi ekstra luas</li>
+          <li>WiFi fiber optic dedicat</li>
+          <li>Kamar mandi pribadi mewah</li>
+          <li>AC & pemanas air pribadi</li>
+          <li>Dapur pribadi mini</li>
+          <li>Parkir motor + atap</li>
+          <li>Akses balkon pribadi</li>
+          <li>Layanan kebersihan mingguan</li>
+          <li>Keamanan 24 jam + CCTV</li>
+        </ul>
+
+        <a href="https://wa.me/08139488240?text=Halo,%20saya%20tertarik%20dengan%20paket%20Elite%20di%20Al'ashar%20Kos.%20Bisa%20tolong%20informasikan%20lebih%20lanjut?" target="_blank" rel="noopener noreferrer" class="btn-outline">
+          Pilih Paket
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom note -->
+    <p class="pricing-note reveal">
+      Harga belum termasuk biaya administrasi. Hubungi kami untuk info lebih lanjut dan ketersediaan kamar.
+    </p>
+  </div>
+</section>
+
+<style>
+  .pricing { padding: 120px 0; background: var(--white-off); }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .price-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 40px 32px 36px;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s, transform 0.3s;
+    position: relative;
+  }
+  .price-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+  }
+
+  /* Popular card */
+  .price-card--popular {
+    border-color: var(--orange);
+    background: linear-gradient(180deg, #fff8f2 0%, var(--white) 30%);
+    box-shadow: 0 8px 40px var(--orange-glow);
+  }
+  .price-card--popular:hover {
+    box-shadow: 0 16px 56px var(--orange-glow);
+  }
+
+  .price-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .price-tier {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .price-badge {
+    font-size: 11px;
+    font-weight: 700;
+    background: var(--orange);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .price-amount {
+    display: flex;
+    align-items: flex-start;
+    gap: 2px;
+    margin-bottom: 2px;
+  }
+  .price-currency {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-top: 6px;
+  }
+  .price-num {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+  }
+  .price-period {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .price-note {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+    min-height: 36px;
+  }
+
+  .price-list {
+    list-style: none;
+    flex: 1;
+    margin-bottom: 32px;
+  }
+  .price-list li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .price-list li:last-child { border-bottom: none; }
+  .price-list li::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    min-width: 7px;
+    background: var(--orange);
+    border-radius: 50%;
+  }
+
+  .price-card .btn-outline,
+  .price-card .btn-primary {
+    width: 100%;
+    justify-content: center;
+    margin-top: auto;
+  }
+
+  .pricing-note {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 48px;
+  }
+
+  @media (max-width: 900px) {
+    .pricing-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
+  }
+  @media (max-width: 560px) {
+    .pricing { padding: 80px 0; }
+    .price-card { padding: 32px 24px 28px; }
+  }
+</style>

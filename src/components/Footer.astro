@@ -1,0 +1,232 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="public/logo.png" alt="Al'ashar Kos Logo" class="footer-logo-img">
+        </div>
+        <p class="footer-tagline">
+          Hunian premium yang mengutamakan kenyamanan, kebersihan, dan keamanan untuk kehidupan Anda yang lebih baik.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon">IG</a>
+          <a href="#" class="social-icon">FB</a>
+          <a href="#" class="social-icon">TK</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigasi</h4>
+        <ul class="footer-links">
+          <li><a href="#tentang">Tentang Kami</a></li>
+          <li><a href="#fasilitas">Fasilitas</a></li>
+          <li><a href="#galeri">Galeri Foto</a></li>
+          <li><a href="#paket">Paket Hunian</a></li>
+          <li><a href="#lokasi">Lokasi</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Hubungi Kami</h4>
+        <ul class="footer-links">
+          <li>
+            <span class="contact-label">WhatsApp</span>
+            <a href="https://wa.me/08139488240" target="_blank" class="wa-link">+62 813-9488-240</a>
+          </li>
+          <li>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">halo@alasharkos.com</span>
+          </li>
+          <li>
+            <span class="contact-label">Alamat</span>
+            <span class="contact-value">Jl. Raya Sukapura No. 123, Bandung</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Pembayaran</h4>
+        <p class="payment-text">Menerima pembayaran via transfer bank & e-wallet:</p>
+        <div class="payment-grid">
+          <div class="pay-item" title="BCA">BCA</div>
+          <div class="pay-item" title="Mandiri">MANDIRI</div>
+          <div class="pay-item" title="BNI">BNI</div>
+          <div class="pay-item" title="Gopay">GOPAY</div>
+          <div class="pay-item" title="OVO">OVO</div>
+          <div class="pay-item" title="ShopeePay">SPAY</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        © 2026 <strong>Al'ashar Kos</strong>. Semua hak dilindungi.
+      </div>
+      <div class="footer-bottom-links">
+        <a href="#">Syarat & Ketentuan</a>
+        <a href="#">Kebijakan Privasi</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  :root {
+    --footer-bg: #111111;
+    --accent: #e67e22;
+    --text-dim: rgba(255, 255, 255, 0.5);
+  }
+
+  .footer {
+    background: var(--footer-bg);
+    color: #fff;
+    padding: 80px 0 40px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.7fr 1fr 1.1fr;
+    gap: 40px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  /* --- Logo Styling (Tetap Kecil) --- */
+  .footer-logo-img {
+    height: 32px; /* Ukuran kecil agar elegan */
+    width: auto;
+    filter: brightness(0) invert(1);
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
+
+  .footer-tagline {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-dim);
+    margin-bottom: 25px;
+  }
+
+  /* --- Navigasi & Links --- */
+  .footer-heading {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+    color: #fff;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 12px;
+  }
+
+  .footer-links a, .contact-value {
+    font-size: 14px;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .footer-links a:hover {
+    color: var(--accent);
+    padding-left: 5px;
+  }
+
+  .contact-label {
+    display: block;
+    font-size: 11px;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  .wa-link {
+    color: #25D366 !important;
+    font-weight: 600;
+  }
+
+  /* --- Payment Methods Styling --- */
+  .payment-text {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 15px;
+  }
+
+  .payment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .pay-item {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 6px 4px;
+    font-size: 10px;
+    font-weight: 800;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    transition: 0.3s;
+    cursor: default;
+  }
+
+  .pay-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: var(--accent);
+  }
+
+  /* --- Footer Bottom --- */
+  .footer-bottom {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .footer-bottom-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-bottom-links a {
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+  }
+
+  /* --- Responsive --- */
+  @media (max-width: 992px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .footer-logo-img {
+      margin: 0 auto 20px;
+    }
+    .payment-grid {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+</style>

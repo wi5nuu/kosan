@@ -1,0 +1,200 @@
+<section class="about" id="tentang">
+  <div class="container about-inner">
+    <div class="about-visual reveal-left">
+      <div class="img-stack">
+        <div class="stack-img stack-img--main photo-frame zoom-on-hover">
+          <img src="https://th.bing.com/th/id/OIP.Nwt5siFbqOf3BfKei9l69gHaEL?w=297&h=180&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3" alt="Al'ashar Kos Exterior" class="actual-img">
+        </div>
+        <div class="stack-img stack-img--side photo-frame zoom-on-hover">
+          <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=600" alt="Al'ashar Kos Interior" class="actual-img">
+        </div>
+        
+        <div class="float-badge">
+          <span class="badge-num">10+</span>
+          <span class="badge-txt">Tahun<br/>Pengalaman</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-text reveal-right">
+      <p class="section-label">Tentang Kami</p>
+      <h2 class="section-title">Hunian yang Dirancang<br/>untuk Kenyamanan Anda</h2>
+      <p class="about-desc">
+        Al'ashar Kos adalah pilihan hunian kos premium yang mengutamakan kenyamanan,
+        kebersihan, dan keamanan. Dengan desain modern dan fasilitas lengkap, kami
+        menghadirkan pengalaman tinggal yang tidak hanya memenuhi kebutuhan, tetapi
+        juga memberikan rasa rumah yang sesungguhnya.
+      </p>
+
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-dot"></div>
+          <div>
+            <h4 class="trust-title">Lingkungan Aman</h4>
+            <p class="trust-desc">Dilengkapi CCTV dan penjaga 24 jam untuk ketenangan pikiran Anda.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-dot"></div>
+          <div>
+            <h4 class="trust-title">Bersih & Nyaman</h4>
+            <p class="trust-desc">Dibersihkan rutin setiap hari oleh tim profesional kami.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-dot"></div>
+          <div>
+            <h4 class="trust-title">Lokasi Strategis</h4>
+            <p class="trust-desc">Dekat dengan kampus, pusat perbelanjaan, dan akses transportasi umum.</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://wa.me/08139488240?text=Halo,%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20Al'ashar%20Kos." target="_blank" rel="noopener noreferrer" class="btn-outline">
+        Hubungi Kami
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about { 
+    /* Padding ditingkatkan untuk memberi ruang bagi navbar fixed */
+    padding: 160px 0 100px; 
+    /* overflow diubah ke visible agar badge tidak terpotong */
+    overflow: visible; 
+    position: relative;
+    /* Memberi jarak otomatis saat klik link di navbar agar judul tidak tertutup */
+    scroll-margin-top: 100px;
+  }
+
+  /* Memastikan konten About berada di bawah lapisan Navbar (2000) */
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 10; 
+  }
+
+  /* Visual stack */
+  .about-visual { position: relative; }
+  .img-stack { position: relative; max-width: 500px; }
+  
+  .stack-img {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+
+  .actual-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .stack-img--main {
+    width: 100%;
+    aspect-ratio: 4/3;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .stack-img--side {
+    position: absolute;
+    right: -40px;
+    bottom: -48px;
+    width: 55%;
+    aspect-ratio: 1/1;
+    border: 6px solid #ffffff;
+    z-index: 2;
+  }
+
+  .zoom-on-hover:hover .actual-img {
+    transform: scale(1.1);
+  }
+
+  .float-badge {
+    position: absolute;
+    top: -24px;
+    left: -32px;
+    background: #e67e22;
+    color: #fff;
+    padding: 18px 20px;
+    border-radius: 16px;
+    text-align: center;
+    z-index: 3;
+    box-shadow: 0 10px 25px rgba(230, 126, 34, 0.3);
+  }
+
+  .badge-num {
+    display: block;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  
+  .badge-txt {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+  }
+
+  /* Text side styling */
+  .about-text { padding-right: 20px; }
+  .section-label { color: #e67e22; font-weight: 700; text-transform: uppercase; font-size: 13px; letter-spacing: 2px; margin-bottom: 12px; }
+  .section-title { font-size: clamp(28px, 4vw, 36px); line-height: 1.2; margin-bottom: 24px; color: #1a1a1a; }
+  
+  .about-desc {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 36px;
+  }
+
+  .trust-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 40px;
+  }
+  .trust-item { display: flex; gap: 16px; align-items: flex-start; }
+  .trust-dot { width: 10px; height: 10px; min-width: 10px; background: #e67e22; border-radius: 50%; margin-top: 7px; }
+  .trust-title { font-size: 16px; font-weight: 700; color: #1a1a1a; margin-bottom: 3px; }
+  .trust-desc { font-size: 14px; color: #777; line-height: 1.5; }
+
+  .btn-outline {
+    display: inline-block;
+    padding: 14px 30px;
+    border: 2px solid #1a1a1a;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s;
+  }
+
+  .btn-outline:hover { background: #1a1a1a; color: #fff; }
+
+  /* Responsive Logic */
+  @media (max-width: 992px) {
+    .about { padding: 120px 0 80px; }
+    .about-inner { grid-template-columns: 1fr; gap: 60px; text-align: center; }
+    .about-visual { margin: 0 auto; width: 100%; display: flex; justify-content: center; }
+    .trust-item { text-align: left; }
+    .about-text { padding-right: 0; }
+  }
+
+  @media (max-width: 600px) {
+    .about { padding-top: 100px; }
+    .stack-img--side { right: -10px; bottom: -20px; width: 50%; }
+    .float-badge { top: -10px; left: 10px; padding: 12px 14px; }
+  }
+</style>

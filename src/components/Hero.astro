@@ -1,0 +1,256 @@
+<section class="hero" id="hero">
+  <div class="hero-slideshow">
+    <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&q=80')"></div>
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80')"></div>
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&q=80')"></div>
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80')"></div>
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=80')"></div>
+    
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="container hero-container">
+    <div class="hero-content">
+      
+      <h1 class="hero-title">
+        Modern Living<br>
+        <span class="text-accent">For Modern People</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        Hunian eksklusif Al'ashar Kos hadir dengan desain minimalis dan fasilitas lengkap untuk mendukung gaya hidup produktif Anda di pusat kota.
+      </p>
+
+      <div class="hero-btn-group">
+        <a href="https://wa.me/08139488240" class="btn-main">
+          <span>Booking Via WhatsApp</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#fasilitas" class="btn-secondary">Lihat Fasilitas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+:root {
+  --primary: #2d3436;
+  --accent: #e67e22; 
+  --white: #ffffff;
+  --text-light: rgba(255,255,255,0.85);
+  --glass: rgba(255, 255, 255, 0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Background Slideshow & Animation */
+.hero-slideshow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #1a1a1a;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  animation: kenBurns 10s infinite alternate;
+}
+
+@keyframes kenBurns {
+  from { transform: scale(1); }
+  to { transform: scale(1.15); }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg, 
+    rgba(0,0,0,0.85) 0%, 
+    rgba(0,0,0,0.4) 50%, 
+    rgba(0,0,0,0.2) 100%
+  );
+}
+
+/* Container */
+.hero-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.hero-content {
+  max-width: 750px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Badge Pulse Animation */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: 1px solid rgba(255,255,255,0.15);
+  margin-bottom: 25px;
+}
+
+.dot-pulse {
+  width: 10px;
+  height: 10px;
+  background: #2ecc71;
+  border-radius: 50%;
+  position: relative;
+}
+
+.dot-pulse::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #2ecc71;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+/* Typography */
+.hero-title {
+  font-size: clamp(2.2rem, 8vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 35px;
+  max-width: 550px;
+}
+
+/* Buttons */
+.hero-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.btn-main {
+  background: var(--accent);
+  color: white;
+  padding: 18px 36px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(230, 126, 34, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 18px 36px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: 0.3s;
+}
+
+.btn-secondary:hover { background: rgba(255,255,255,0.15); }
+
+/* Stats Card */
+.hero-stats-card {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  padding: 25px;
+  border-radius: 24px;
+  gap: 25px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.stat-item { display: flex; flex-direction: column; gap: 4px; }
+.stat-val { font-size: 1.6rem; font-weight: 800; color: var(--accent); }
+.stat-lab { font-size: 0.85rem; color: var(--text-light); white-space: nowrap; }
+.stat-sep { width: 1px; background: rgba(255,255,255,0.15); }
+
+/* MOBILE RESPONSIVE OPTIMIZATION */
+@media (max-width: 768px) {
+  .hero { align-items: flex-end; padding-bottom: 60px; }
+  .hero-content { text-align: center; margin: 0 auto; }
+  .hero-subtitle { margin-left: auto; margin-right: auto; }
+  .hero-btn-group { justify-content: center; }
+  .btn-main, .btn-secondary { width: 100%; justify-content: center; }
+  
+  .hero-stats-card {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 15px;
+    padding: 20px;
+  }
+  .stat-sep { height: 1px; width: 100%; }
+  .stat-item { align-items: center; }
+}
+</style>
+
+<script>
+  // Script Slideshow 5 Foto
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function nextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }
+
+  // Interval 6 detik untuk transisi yang lebih santai
+  setInterval(nextSlide, 6000);
+</script>
